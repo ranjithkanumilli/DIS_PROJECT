@@ -35,7 +35,7 @@ body {
 }
 
 section {
-  padding: 3rem 0 2rem;
+  padding: 6rem 0 0rem;
 }
 
 .container {
@@ -235,9 +235,21 @@ footer {
 /* product */
 
 .product-main {
-  padding: 20%;
-}
+  padding-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0% 10%;
 
+}
+.product-image {
+  flex-basis: 50%;
+}
+.product-details {
+  flex-basis: 50%;
+  padding-left: 20px;
+}
 /* about us  */
 
 .about-main {

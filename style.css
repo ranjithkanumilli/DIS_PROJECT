@@ -9,11 +9,11 @@
 }
 
 :root {
-  --main-color: #461220;
-  --hover-color: #8c2f39;
-  --body-color: #b23a48;
-  --container-color: #fcb9b2;
-  --text-color: #fed0bb;
+  --main-color: #40513B;
+  --hover-color: #609966;
+  --body-color: #9DC08B;
+  --container-color: #609966;
+  --text-color: #EDF1D6;
 }
 
 a {
@@ -178,25 +178,32 @@ nav .content .links {
 
 
 /* home */
+.home{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.arrowimg {
+ display: none;
+}
 
 
 /* movie section */
+
 
 .movies {
   margin: 5% 0% 5% 0%;
   padding: 10px;
   position: relative;
 }
-
 .scroll-container {
-  margin: 20px;
-  padding: 0px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  height: 20rem;
 }
+
 
 .movie-details {
   height: 100%;
@@ -205,13 +212,38 @@ nav .content .links {
 
 .movie-details img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 390px;
 }
 
 .movies-title {
   display: flex;
   justify-content: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+  }
+  .movie-details img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .arrowimg {
+    display: block;
+    max-width: 50px;
+  }
+  
+  .arrowimg:hover{
+    cursor: pointer;
+  }
 }
 
 footer {
@@ -223,7 +255,6 @@ footer {
   background-color: var(--main-color);
 
 }
-
 /* moviePage  */
 
 .moviesPage-main {

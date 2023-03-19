@@ -1,3 +1,4 @@
+/* default styles */
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +49,8 @@ section {
   width: 100%;
 }
 
+
+/* Nav bar */
 .navbar {
   background: var(--main-color);
   position: fixed;
@@ -110,8 +113,7 @@ nav .content .links {
   color: var(--text-color);
   font-size: 18px;
   cursor: pointer;
-  line-height: 70px;
-  width: 70px;
+  width: 30px;
   text-align: center;
 }
 
@@ -158,8 +160,7 @@ nav .content .links {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  line-height: 60px;
-  width: 70px;
+  width: 30px;
   background: var(--main-color);
   border: none;
   outline: none;
@@ -186,7 +187,7 @@ nav .content .links {
 /* movie section */
 
 .movies {
-  margin: 5% 0% 5% 0%;
+  margin: 10% 0% 5% 0%;
   padding: 10px;
   position: relative;
 }
@@ -214,32 +215,7 @@ nav .content .links {
   justify-content: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .scroll-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    flex-direction: row;
-  }
 
-  .movie-details img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .arrowimg {
-    display: block;
-    max-width: 50px;
-  }
-
-  .arrowimg:hover {
-    cursor: pointer;
-  }
-}
 
 footer {
   margin: 20px 0px 0px 0px;
@@ -292,16 +268,6 @@ footer {
   border: none;
   padding: 20px;
 }
-@media only screen and (min-width: 768px) {
-  .product-main {
-    padding-top: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0% 10%;
-  }
-}
 
 /* about us  */
 
@@ -320,7 +286,9 @@ footer {
   border-collapse: collapse;
   width: 100%;
 }
-
+.about-table img{
+  width: 40%;
+}
 .about-table th,
 td {
   border: 1px solid var(--main-color);
@@ -335,12 +303,57 @@ td {
 .about-page{
  padding:20% 10% 10% 10%;
 }
+
+
+
+/* Responsive code start */
+
+
+@media only screen and (min-width: 768px) {
+  .product-main {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 10%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .movie-details img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .arrowimg {
+    display: block;
+    max-width: 50px;
+  }
+
+  .arrowimg:hover {
+    cursor: pointer;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .about-page {
     padding:10%;
   }
 }
-/* Responsive code start */
+
 @media screen and (max-width: 1250px) {
   .navbar nav {
     max-width: 100%;

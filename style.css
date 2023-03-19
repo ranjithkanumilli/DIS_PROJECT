@@ -302,6 +302,7 @@ footer {
     margin: 0% 10%;
   }
 }
+
 /* about us  */
 
 .about-main {
@@ -311,7 +312,8 @@ footer {
 .about-table {
   display: flex;
   align-items: center;
-  padding:20% 10%;
+  padding: 0% 8%;
+  
 }
 
 .about-table table {
@@ -329,8 +331,12 @@ td {
 .about-table th {
   background-color: var(--main-color);
 }
+
+.about-page{
+ padding:20% 10% 10% 10%;
+}
 @media only screen and (min-width: 768px) {
-  .about-table {
+  .about-page {
     padding:10%;
   }
 }

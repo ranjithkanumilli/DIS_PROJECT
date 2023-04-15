@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,9 +17,9 @@
             <input type="checkbox" id="show-menu">
             <label for="show-menu" class="menu-icon"><img src="../icons/burger-menu.svg" alt=""></i></label>
             <div class="content">
-                <div class="logo"><a href="../Index.html">MoviesNow</a></div>
+                <div class="logo"><a href="../index.html">MoviesNow</a></div>
                 <ul class="links">
-                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="./moviesPage.html">Movies</a></li>
                     <li><a href="./TvShowsPage.html">TvShows</a></li>
                     <li><a href="./about.html">About</a></li>
@@ -26,33 +27,22 @@
                 </ul>
             </div>
             <label for="show-search" class="search-icon"><img src="../icons/search.svg" alt=""></label>
-            <form action="#" class="search-box">
-                <input type="text" placeholder="Type Something to Search..." required>
+            <form action="#" class="search-box" id="form">
+                <input type="text" id="search" placeholder="Type Something to Search..." required>
                 <button type="submit" class="go-icon"><img src="../icons/right-arrowtail.svg" alt=""></i></button>
             </form>
         </nav>
     </div>
 <!-- details of the selected movie -->
-    <div class="product-main">
-        <div class="product-image">
-            <img src="../images/godfather.jpg" alt="">
-        </div>
-        <div class="product-details">
-            <h2>god father - 9.5★</h2>
-            <p>The series revolves around a large family dominated by Father Zain Al Attar, who embodies the course of
-                the artist Mahmoud Hamida, and has a large number of children who live with him in the house except two,
-                one of them lives in a shelter and the other an aggressive person, and recounts the relationship of this
-                father with gangs of arms and smugglers.</p>
-                <br>
-                <p>Peter Mimi</p>
-                <p>Creator</p>
-        </div>
-    </div>
-    <div class="action-buttons">
-        <button>Watch Now</button>
-        <button>add to favorites♡</button>
-    </div>
+<section class="product-details-main">
+    
+    
+</section>
+<div class="action-buttons">
+    <button>Watch Now</button>
+    <button>add to favorites♡</button>
+</div>
 </body>
 
-
+<script src="../script/script-product.js"></script>
 </html>

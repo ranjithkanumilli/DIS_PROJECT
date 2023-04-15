@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
     <link rel="stylesheet" href="../style.css" />
-    
+
 </head>
 
 <body>
@@ -17,148 +17,43 @@
             <input type="checkbox" id="show-menu" />
             <label for="show-menu" class="menu-icon"><img src="../icons/burger-menu.svg" alt=""></i></label>
             <div class="content">
-                <div class="logo"><a href="../Index.html">MoviesNow</a></div>
+                <div class="logo"><a href="../index.html">MoviesNow</a></div>
                 <ul class="links">
-                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#">Movies</a></li>
                     <li><a href="./TvShowsPage.html">TvShows</a></li>
                     <li><a href="./about.html">About</a></li>
                 </ul>
             </div>
             <label for="show-search" class="search-icon"><img src="../icons/search.svg" alt=""></label>
-            <form action="#" class="search-box">
-                <input type="text" placeholder="Type Something to Search..." required>
+            <form action="#" class="search-box" id="form">
+                <input type="text" id="search" placeholder="Type Something to Search..." required>
                 <button type="submit" class="go-icon"><img src="../icons/right-arrowtail.svg" alt=""></i></button>
             </form>
         </nav>
     </div>
-<!-- carousel -->
-    <div>movies</div>
-    <section class="movies">
-        <div class="movies-title">
-            <h2>Trending movies</h2>
-        </div>
 
-        <div class="scroll-container">
-            <img class="arrowimg" src="./icons/left-arrow.svg" alt="" />
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/avatar.jpg" alt="" /></a>
-                <p>Avatar</p>
-                <p>imdb: 9★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/forestGump.jpg" alt="" /></a>
-                <p>Forest Gump</p>
-                <p>imdb: 8★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/jujutsukaisen.jpg" alt="" /></a>
-                <p>Jujutsu kaisen 0</p>
-                <p>imdb: 9.5★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/johnwick.jpg" alt="" /></a>
-                <p>John Wick 4</p>
-                <p>imdb: 8.3★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/megan.jpg" alt="" /></a>
-                <p>Megan</p>
-                <p>imdb: 7.9★</p>
-            </div>
-            <img class="arrowimg" src="../icons/right-arrow.svg" alt="" />
-        </div>
+
+    <div class="moviesPage-title">
+        <h2>Movies</h2>
+    </div>
+
+    <div id="tags">
+        <div class="tag">Action</div>
+        <div class="tag">adventure</div>
+        <div class="tag">horror</div>
+        <div class="tag">comedy</div>
+    </div>
+    <section class="movies-page">
     </section>
 
-    <section class="movies">
-        <div class="movies-title">
-            <h2>New movies</h2>
-        </div>
 
-        <div class="scroll-container">
-            <img class="arrowimg" src="./icons/left-arrow.svg" alt="" />
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/avatar.jpg" alt="" /></a>
-                <p>Avatar</p>
-                <p>imdb: 9★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/forestGump.jpg" alt="" /></a>
-                <p>Forest Gump</p>
-                <p>imdb: 8★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/jujutsukaisen.jpg" alt="" /></a>
-                <p>Jujutsu kaisen 0</p>
-                <p>imdb: 9.5★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/johnwick.jpg" alt="" /></a>
-                <p>John Wick 4</p>
-                <p>imdb: 8.3★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/megan.jpg" alt="" /></a>
-                <p>Megan</p>
-                <p>imdb: 7.9★</p>
-            </div>
-            <img class="arrowimg" src="../icons/right-arrow.svg" alt="" />
-        </div>
-    </section>
 
-    <section class="movies">
-        <div class="movies-title">
-            <h2>Top Rated Movies</h2>
-        </div>
 
-        <div class="scroll-container">
-            <img class="arrowimg" src="./icons/left-arrow.svg" alt="" />
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/avatar.jpg" alt="" /></a>
-                <p>Avatar</p>
-                <p>imdb: 9★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/forestGump.jpg" alt="" /></a>
-                <p>Forest Gump</p>
-                <p>imdb: 8★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/jujutsukaisen.jpg" alt="" /></a>
-                <p>Jujutsu kaisen 0</p>
-                <p>imdb: 9.5★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/johnwick.jpg" alt="" /></a>
-                <p>John Wick 4</p>
-                <p>imdb: 8.3★</p>
-            </div>
-            <div class="movie-details">
-                <a href="./Product.html">
-                    <img src="../images/movies/megan.jpg" alt="" /></a>
-                <p>Megan</p>
-                <p>imdb: 7.9★</p>
-            </div>
-            <img class="arrowimg" src="../icons/right-arrow.svg" alt="" />
-        </div>
-    </section>
 </body>
 <footer>
     <div class="footer-container">MoviesNow</div>
 </footer>
+<script src="../script/scriptmovies.js"></script>
 
 </html>

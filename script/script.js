@@ -139,7 +139,7 @@ function showTrendingTv(data) {
     const movieEl = document.createElement('div');
     movieEl.classList.add('carousel-item-tv');
     movieEl.innerHTML = `
-        <a href="#" onclick="showTvDetails(${id})">
+        <a href="#" onclick="showTvDetails(${id}) ">
             <img src="${IMG_URL + poster_path}" alt="${name}">
         </a>
         <p>${name}</p>
@@ -176,6 +176,7 @@ form.addEventListener('submit', (e) => {
   const searchTerm = search.value;
 
   if (searchTerm) {
+    
     getTrendingMovies(searchURL + '&query=' + searchTerm)
   }
 })
@@ -196,10 +197,10 @@ let intervalId;
 function generateCarouselItems(data) {
   let carouselItemsHTML = "";
   data.forEach((item) => {
-    const { backdrop_path, title } = item;
+    const { backdrop_path, title ,id} = item;
     carouselItemsHTML += `
       <div class="carousel-hero-item">
-        <img src="${IMG_URL_ORIGINAL + backdrop_path}">
+        <a href="#" onclick="showMovieDetails(${id})" ><img src="${IMG_URL_ORIGINAL + backdrop_path}"></a> 
         <div class="carousel-hero-title">${title}</div>
       </div>
     `;

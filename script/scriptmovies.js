@@ -172,7 +172,7 @@ function showMovieDetails(id) {
     // You can use the title parameter to fetch the movie details from your API or database
 
     // Example code to redirect to the details page:
-    window.location.href = `./Product.html?id=${id}`;
+    window.location.href = `./Product.html?id=${id}&type=movie`;
 
 }
 

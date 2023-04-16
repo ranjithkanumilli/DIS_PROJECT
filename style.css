@@ -422,7 +422,9 @@ td {
     max-height: 100%;
   }
 }
-
+.arrowimg{
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   .arrowimg {
     display: block;

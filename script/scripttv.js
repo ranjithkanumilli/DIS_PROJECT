@@ -7,7 +7,7 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
 const movies = document.getElementsByClassName("movies-page")[0];
 
-const MOVIE_URL = BASE_URL + '/discover/tv?sort_by=popularity.desc&' + API_KEY;
+const MOVIE_URL = BASE_URL + '/discover/tv?sort_by=popularity.desc&' + API_KEY + '&language=en-US';
 
 const searchURL = BASE_URL + '/search/tv?' + API_KEY;
 getMovies(MOVIE_URL);
@@ -159,7 +159,7 @@ function showMovieDetails(id) {
     // You can use the title parameter to fetch the movie details from your API or database
 
     // Example code to redirect to the details page:
-    window.location.href = `./Product.html?id=${id}`;
+    window.location.href = `./Product.html?id=${id}&type=tv`;
 
 }
 

@@ -139,7 +139,7 @@ function showTrendingTv(data) {
     const movieEl = document.createElement('div');
     movieEl.classList.add('carousel-item-tv');
     movieEl.innerHTML = `
-        <a href="#" onclick="showMovieDetails(${id})">
+        <a href="#" onclick="showTvDetails(${id})">
             <img src="${IMG_URL + poster_path}" alt="${name}">
         </a>
         <p>${name}</p>
@@ -157,7 +157,12 @@ function showTrendingTv(data) {
 
 function showMovieDetails(id) {
 
-  window.location.href = `./Pages/Product.html?id=${id}`;
+  window.location.href = `./Pages/Product.html?id=${id}&type=movie`;
+
+}
+function showTvDetails(id) {
+
+  window.location.href = `./Pages/Product.html?id=${id}&type=tv`;
 
 }
 

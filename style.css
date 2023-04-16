@@ -172,21 +172,79 @@ nav .content .links {
   display: none;
 }
 
-/* home */
-.home {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+/* carousel hero */
+
+.carousel-hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-width: 1022px;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
-.arrowimg {
-  display: none;
+.carousel-container-hero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-hero-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-hero-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel-hero-prev,
+.carousel-hero-next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-60%);
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.carousel-hero-prev {
+  left: 0;
+}
+
+.carousel-hero-next {
+  right: 0;
+}
+
+.carousel-hero-prev:hover,
+.carousel-hero-next:hover {
+  opacity: 0.8;
+}
+
+.carousel-hero-title {
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
 }
 
 /* movie section */
 
 .movies {
-  margin: 10% 0% 5% 0%;
+  margin: 3% 0% 3% 0%;
   padding: 10px;
   position: relative;
 }
@@ -532,10 +590,25 @@ td {
   scrollbar-width: none;
   margin-bottom: 20px;
 }
+
+.carousel-container-tv {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 20px;
+}
 .carousel-container::-webkit-scrollbar {
   display: none;
 }
-.carousel-item {
+
+.carousel-container-tv::-webkit-scrollbar {
+  display: none;
+}
+.carousel-item,
+.carousel-item-tv {
   flex: 0 0 auto;
   width: calc(100% / 5);
   height: auto;
@@ -554,7 +627,9 @@ td {
   margin-top: 10px;
 }
 .prev-button,
-.next-button {
+.next-button,
+.prev-button-tv,
+.next-button-tv {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -565,9 +640,11 @@ td {
   padding: 10px 20px;
   cursor: pointer;
 }
-.prev-button {
+.prev-button,
+.prev-button-tv {
   left: 0;
 }
-.next-button {
+.next-button,
+.next-button-tv {
   right: 0;
 }

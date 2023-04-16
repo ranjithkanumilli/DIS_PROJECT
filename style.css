@@ -648,3 +648,18 @@ td {
 .next-button-tv {
   right: 0;
 }
+
+
+/* chart js */
+.charts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  padding-top: 10%;
+  margin: 0 auto;
+}
+
+.chart-item{
+  margin: 30px;
+}

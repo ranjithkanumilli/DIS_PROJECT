@@ -10,11 +10,11 @@
 }
 
 :root {
-  --main-color: #40513b;
-  --hover-color: #609966;
-  --body-color: #9dc08b;
-  --container-color: #609966;
-  --text-color: #edf1d6;
+  --main-color: #082032;
+  --hover-color: #2C394B;
+  --body-color: #334756;
+  --container-color: #6B728E;
+  --text-color: #EEEEEE;
 }
 
 a {
@@ -181,7 +181,7 @@ nav .content .links {
   overflow: hidden;
   max-width: 1022px;
   margin: 0 auto;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .carousel-container-hero {
@@ -229,16 +229,21 @@ nav .content .links {
 }
 
 .carousel-hero-title {
-  bottom: 8px;
+  bottom: 5px;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 40px;
+  font-size: 20px;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
   position: absolute;
+}
+@media only screen and (min-width: 768px) {
+  .carousel-hero-title {
+    font-size: 40px;
+  }
 }
 
 /* movie section */
@@ -659,7 +664,7 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1000px;
   padding-top: 10%;
   margin: 0 auto;
 }

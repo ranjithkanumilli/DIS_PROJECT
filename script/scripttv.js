@@ -14,77 +14,77 @@ getMovies(MOVIE_URL);
 
 function getMovies(url) {
 
-    fetch(url).then(res => res.json()).then(data => {
-        showMovies(data.results);
-    })
+  fetch(url).then(res => res.json()).then(data => {
+    showMovies(data.results);
+  })
 
 }
 
 const genres = [
-    {
-        "id": 10759,
-        "name": "Action & Adventure"
-      },
-      {
-        "id": 16,
-        "name": "Animation"
-      },
-      {
-        "id": 35,
-        "name": "Comedy"
-      },
-      {
-        "id": 80,
-        "name": "Crime"
-      },
-      {
-        "id": 99,
-        "name": "Documentary"
-      },
-      {
-        "id": 18,
-        "name": "Drama"
-      },
-      {
-        "id": 10751,
-        "name": "Family"
-      },
-      {
-        "id": 10762,
-        "name": "Kids"
-      },
-      {
-        "id": 9648,
-        "name": "Mystery"
-      },
-      {
-        "id": 10763,
-        "name": "News"
-      },
-      {
-        "id": 10764,
-        "name": "Reality"
-      },
-      {
-        "id": 10765,
-        "name": "Sci-Fi & Fantasy"
-      },
-      {
-        "id": 10766,
-        "name": "Soap"
-      },
-      {
-        "id": 10767,
-        "name": "Talk"
-      },
-      {
-        "id": 10768,
-        "name": "War & Politics"
-      },
-      {
-        "id": 37,
-        "name": "Western"
-      }
+  {
+    "id": 10759,
+    "name": "Action & Adventure"
+  },
+  {
+    "id": 16,
+    "name": "Animation"
+  },
+  {
+    "id": 35,
+    "name": "Comedy"
+  },
+  {
+    "id": 80,
+    "name": "Crime"
+  },
+  {
+    "id": 99,
+    "name": "Documentary"
+  },
+  {
+    "id": 18,
+    "name": "Drama"
+  },
+  {
+    "id": 10751,
+    "name": "Family"
+  },
+  {
+    "id": 10762,
+    "name": "Kids"
+  },
+  {
+    "id": 9648,
+    "name": "Mystery"
+  },
+  {
+    "id": 10763,
+    "name": "News"
+  },
+  {
+    "id": 10764,
+    "name": "Reality"
+  },
+  {
+    "id": 10765,
+    "name": "Sci-Fi & Fantasy"
+  },
+  {
+    "id": 10766,
+    "name": "Soap"
+  },
+  {
+    "id": 10767,
+    "name": "Talk"
+  },
+  {
+    "id": 10768,
+    "name": "War & Politics"
+  },
+  {
+    "id": 37,
+    "name": "Western"
+  }
 ]
 
 const tagsEl = document.getElementById('tags');
@@ -92,55 +92,55 @@ const tagsEl = document.getElementById('tags');
 var selectedGenre = []
 setGenre()
 function setGenre() {
-    tagsEl.innerHTML = '';
-    genres.forEach(genre => {
-        const t = document.createElement('div');
-        t.classList.add('tag');
-        t.id = genre.id;
-        t.innerText = genre.name;
-        t.addEventListener('click', () => {
-            if (selectedGenre.length == 0) {
-                selectedGenre.push(genre.id);
-            } else {
-                if (selectedGenre.includes(genre.id)) {
-                    selectedGenre.forEach((id, idx) => {
-                        if (id == genre.id) {
-                            selectedGenre.splice(idx, 1);
-                        }
-                    })
-                } else {
-                    selectedGenre.push(genre.id);
-                }
+  tagsEl.innerHTML = '';
+  genres.forEach(genre => {
+    const t = document.createElement('div');
+    t.classList.add('tag');
+    t.id = genre.id;
+    t.innerText = genre.name;
+    t.addEventListener('click', () => {
+      if (selectedGenre.length == 0) {
+        selectedGenre.push(genre.id);
+      } else {
+        if (selectedGenre.includes(genre.id)) {
+          selectedGenre.forEach((id, idx) => {
+            if (id == genre.id) {
+              selectedGenre.splice(idx, 1);
             }
-            getMovies(MOVIE_URL + '&with_genres=' + encodeURI(selectedGenre.join(',')));
-            highlightSelection()
-        })
-        tagsEl.append(t);
+          })
+        } else {
+          selectedGenre.push(genre.id);
+        }
+      }
+      getMovies(MOVIE_URL + '&with_genres=' + encodeURI(selectedGenre.join(',')));
+      highlightSelection()
     })
+    tagsEl.append(t);
+  })
 }
 
 function highlightSelection() {
-    const tags = document.querySelectorAll('.tag');
-    tags.forEach(tag => {
-        tag.style.cssText = 'color:none';
+  const tags = document.querySelectorAll('.tag');
+  tags.forEach(tag => {
+    tag.style.cssText = 'color:none';
+  })
+  if (selectedGenre.length != 0) {
+    selectedGenre.forEach(id => {
+      const highlightedtag = document.getElementById(id);
+      highlightedtag.style.cssText = 'background-color:#609966';
     })
-    if (selectedGenre.length != 0) {
-        selectedGenre.forEach(id => {
-            const highlightedtag = document.getElementById(id);
-            highlightedtag.style.cssText = 'background-color:#609966';
-        })
-    }
+  }
 
 }
 
 function showMovies(data) {
-    movies.innerHTML = '';
+  movies.innerHTML = '';
 
-    data.forEach(item => {
-        const { name, poster_path, vote_average, id } = item;
-        const movieEl = document.createElement('div');
-        movieEl.classList.add('carousel-item');
-        movieEl.innerHTML = `
+  data.forEach(item => {
+    const { name, poster_path, vote_average, id } = item;
+    const movieEl = document.createElement('div');
+    movieEl.classList.add('carousel-item');
+    movieEl.innerHTML = `
         <a href="#" onclick="showMovieDetails(${id})">
             <img src="${IMG_URL + poster_path}" alt="${name}">
         </a>
@@ -149,17 +149,17 @@ function showMovies(data) {
 
         `
 
-        movies.appendChild(movieEl);
-    })
+    movies.appendChild(movieEl);
+  })
 }
 
 
 function showMovieDetails(id) {
-    // This function will open a new page to show the details of the selected movie
-    // You can use the title parameter to fetch the movie details from your API or database
+  // This function will open a new page to show the details of the selected movie
+  // You can use the title parameter to fetch the movie details from your API or database
 
-    // Example code to redirect to the details page:
-    window.location.href = `./Product.html?id=${id}&type=tv`;
+  // Example code to redirect to the details page:
+  window.location.href = `./Product.html?id=${id}&type=tv`;
 
 }
 
@@ -171,10 +171,10 @@ const form = document.getElementById('form');
 const search = document.getElementById('search');
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const searchTerm = search.value;
+  e.preventDefault();
+  const searchTerm = search.value;
 
-    if(searchTerm){
-        getMovies(searchURL + '&query=' + searchTerm)
-    }
+  if (searchTerm) {
+    getMovies(searchURL + '&query=' + searchTerm)
+  }
 })

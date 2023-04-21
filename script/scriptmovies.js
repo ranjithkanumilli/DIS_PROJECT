@@ -178,6 +178,12 @@ function showMovieDetails(id) {
 
 
 
+const urlParams = new URLSearchParams(window.location.search);
+const searchTermhome = urlParams.get("search");
+
+if (searchTermhome) {
+    getMovies(searchURL + '&query=' + searchTermhome)
+}
 
 
 const form = document.getElementById('form');
@@ -187,7 +193,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const searchTerm = search.value;
 
-    if(searchTerm){
+    if (searchTerm) {
         getMovies(searchURL + '&query=' + searchTerm)
     }
 })

@@ -176,8 +176,9 @@ form.addEventListener('submit', (e) => {
   const searchTerm = search.value;
 
   if (searchTerm) {
-    
-    getTrendingMovies(searchURL + '&query=' + searchTerm)
+
+    window.location.href = `./Pages/moviesPage.html?search=${searchTerm}`;
+    // getTrendingMovies(searchURL + '&query=' + searchTerm)
   }
 })
 
@@ -197,7 +198,7 @@ let intervalId;
 function generateCarouselItems(data) {
   let carouselItemsHTML = "";
   data.forEach((item) => {
-    const { backdrop_path, title ,id} = item;
+    const { backdrop_path, title, id } = item;
     carouselItemsHTML += `
       <div class="carousel-hero-item">
         <a href="#" onclick="showMovieDetails(${id})" ><img src="${IMG_URL_ORIGINAL + backdrop_path}"></a> 

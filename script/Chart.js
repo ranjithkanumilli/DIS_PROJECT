@@ -10,6 +10,9 @@ const TRENDING_MOVIES_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&
 const GENRES_URL = BASE_URL + '/genre/movie/list?' + API_KEY;
 const POPULAR_URL = BASE_URL + '/movie/top_rated?' + API_KEY;
 
+Chart.defaults.font.size = 14;
+Chart.defaults.color = "white";
+
 fetch(TRENDING_MOVIES_URL)
     .then(response => response.json())
     .then(data => {
@@ -21,7 +24,7 @@ fetch(TRENDING_MOVIES_URL)
             datasets: [
                 {
                     label: 'Top Rated Movies',
-                    backgroundColor: '#40513b',
+                    backgroundColor: '#E3FDFD',
                     data: movieRatings,
                 },
             ],
@@ -45,6 +48,7 @@ fetch(TRENDING_MOVIES_URL)
             data: chartData,
             options: chartOptions,
         });
+        
     });
 
 
@@ -72,7 +76,7 @@ fetch(TOP_Grossing)
                     datasets: [
                         {
                             label: 'Highest Grossing Movies',
-                            backgroundColor: '#40513b',
+                            backgroundColor: '#E3FDFD',
                             data: movieRevenues,
                         },
                     ],
@@ -121,7 +125,7 @@ fetch(GENRES_URL)
     })
     .catch(error => console.error(error));
 
-    
+
 
 // Function to create the pie chart
 function createPieChart(data) {
@@ -181,3 +185,17 @@ function createPieChart(data) {
 
 
 
+const searchURL = BASE_URL + '/search/movie?' + API_KEY;
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const searchTerm = search.value;
+
+  if (searchTerm) {
+    
+    window.location.href = `../Pages/moviesPage.html?search=${searchTerm}`;
+    // getTrendingMovies(searchURL + '&query=' + searchTerm)
+  }
+})

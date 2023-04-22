@@ -24,7 +24,7 @@ fetch(TRENDING_MOVIES_URL)
             datasets: [
                 {
                     label: 'Top Rated Movies',
-                    backgroundColor: '#E3FDFD',
+                    backgroundColor: '#FFA559',
                     data: movieRatings,
                 },
             ],
@@ -48,7 +48,7 @@ fetch(TRENDING_MOVIES_URL)
             data: chartData,
             options: chartOptions,
         });
-        
+
     });
 
 
@@ -76,7 +76,7 @@ fetch(TOP_Grossing)
                     datasets: [
                         {
                             label: 'Highest Grossing Movies',
-                            backgroundColor: '#E3FDFD',
+                            backgroundColor: '#E5BEEC',
                             data: movieRevenues,
                         },
                     ],
@@ -140,20 +140,38 @@ function createPieChart(data) {
             datasets: [{
                 data: values,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 255, 255, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(255, 0, 0, 1)',
+                    'rgba(0, 255, 0, 1)',
+                    'rgba(0, 0, 255, 1)',
+                    'rgba(255, 255, 0, 1)',
+                    'rgba(255, 0, 255, 1)',
+                    'rgba(0, 255, 255, 1)',
+                    'rgba(128, 0, 0, 1)',
+                    'rgba(0, 128, 0, 1)',
+                    'rgba(0, 0, 128, 1)',
+                    'rgba(128, 128, 0, 1)',
+                    'rgba(128, 0, 128, 1)',
+                    'rgba(0, 128, 128, 1)',
+                    'rgba(255, 128, 0, 1)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(255, 255, 255, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(255, 0, 0, 1)',
+                    'rgba(0, 255, 0, 1)',
+                    'rgba(0, 0, 255, 1)',
+                    'rgba(255, 255, 0, 1)',
+                    'rgba(255, 0, 255, 1)',
+                    'rgba(0, 255, 255, 1)',
+                    'rgba(128, 0, 0, 1)',
+                    'rgba(0, 128, 0, 1)',
+                    'rgba(0, 0, 128, 1)',
+                    'rgba(128, 128, 0, 1)',
+                    'rgba(128, 0, 128, 1)',
+                    'rgba(0, 128, 128, 1)',
+                    'rgba(255, 128, 0, 1)',
                 ],
                 borderWidth: 1
             }]
@@ -190,12 +208,12 @@ const form = document.getElementById('form');
 const search = document.getElementById('search');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const searchTerm = search.value;
+    e.preventDefault();
+    const searchTerm = search.value;
 
-  if (searchTerm) {
-    
-    window.location.href = `../Pages/moviesPage.html?search=${searchTerm}`;
-    // getTrendingMovies(searchURL + '&query=' + searchTerm)
-  }
+    if (searchTerm) {
+
+        window.location.href = `../Pages/moviesPage.html?search=${searchTerm}`;
+        // getTrendingMovies(searchURL + '&query=' + searchTerm)
+    }
 })

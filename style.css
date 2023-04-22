@@ -6,7 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-padding-top: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
@@ -14,7 +14,7 @@
   --hover-color: #2C394B;
   --body-color: #334756;
   --container-color: #6B728E;
-  --text-color: #EEEEEE;
+  --text-color: #beb9b9;
 }
 
 a {
@@ -377,6 +377,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 0% 8%;
+  
 }
 
 .about-table table {
@@ -399,8 +400,12 @@ td {
 
 .about-page {
   padding: 20% 10% 10% 10%;
+  text-align: justify;
 }
 
+.about-page h2{
+  text-decoration-line: underline;
+}
 /* Responsive code start */
 
 @media only screen and (min-width: 768px) {

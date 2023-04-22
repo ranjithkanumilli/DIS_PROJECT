@@ -20,7 +20,7 @@ fetch(
 )
     .then((response) => response.json())
     .then((data) => {
-        const youtubeKey = data.videos.results[0].key;
+        const youtubeKey = data.videos.results[0]?.key ? data.videos.results[0]?.key : '#';
         // Construct YouTube link
         const youtubeLink = `https://www.youtube.com/watch?v=${youtubeKey}`;
 
@@ -69,3 +69,10 @@ form.addEventListener('submit', (e) => {
         // getTrendingMovies(searchURL + '&query=' + searchTerm)
     }
 })
+
+const searchIcon = document.querySelector('.search-icon');
+  const searchInput = document.querySelector('#search');
+
+  searchIcon.addEventListener('click', () => {
+    searchInput.focus();
+  });

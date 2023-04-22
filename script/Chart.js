@@ -10,8 +10,23 @@ const TRENDING_MOVIES_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&
 const GENRES_URL = BASE_URL + '/genre/movie/list?' + API_KEY;
 const POPULAR_URL = BASE_URL + '/movie/top_rated?' + API_KEY;
 
-Chart.defaults.font.size = 14;
+// Chart.defaults.font.size = 10;
 Chart.defaults.color = "white";
+
+
+window.onload = function(){
+    if(window.innerWidth >= 999){
+        Chart.defaults.font.size = 15;
+    }
+    else{
+        Chart.defaults.font.size = 8;
+    }
+
+    drawCharts()
+}
+
+function drawCharts(){
+
 
 fetch(TRENDING_MOVIES_URL)
     .then(response => response.json())
@@ -199,7 +214,7 @@ function createPieChart(data) {
     });
 }
 
-
+}
 
 
 
@@ -217,3 +232,10 @@ form.addEventListener('submit', (e) => {
         // getTrendingMovies(searchURL + '&query=' + searchTerm)
     }
 })
+
+const searchIcon = document.querySelector('.search-icon');
+  const searchInput = document.querySelector('#search');
+
+  searchIcon.addEventListener('click', () => {
+    searchInput.focus();
+  });

@@ -1,4 +1,4 @@
-//TMDB
+//TMDB API
 
 const API_KEY = 'api_key=f55104d0cb044a5ac6b66815a2732922';
 
